@@ -10,8 +10,12 @@ $(document).ready(function () {
     function grayBg() {
         var windowWidth = $('body').width(),
             bgWidth = (windowWidth - 960) / 2,
-            sideBarWidth = $('.container-wrap .right-container').innerWidth();
-        $('.right-container .gray-bg').css('width', bgWidth + sideBarWidth);
+            rightWidth = $('.container-wrap .right-container').innerWidth(),
+            leftWidth = $('.container-wrap .left-container').innerWidth();
+        $('.container-wrap .gray-bg').css({
+            width: bgWidth + rightWidth,
+            left: leftWidth
+        });
     };
 
     $(window).resize(function () {
