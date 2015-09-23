@@ -239,12 +239,12 @@ a {
         }
     }
     .gray-bg {
-        left: 0;
         top: 0;
         bottom: 0;
         position: absolute;
         background: #f4f4f4;
         z-index: -1;
+        min-width: 240px;
     }
 }
 
